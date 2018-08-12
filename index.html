@@ -3,6 +3,7 @@
 <head>
 	<title>High Country Life</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="css/menufullpage.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -10,12 +11,32 @@
 </head>
 <body>
 
+<!-- <a href="#menu" class="menu-link">
+        <span>toggle menu</span>
+</a> -->
+
+<nav id="menu" class="panel" role="navigation">
+      <ul>
+            <li><a data-scroll href="#">Home</a></li>
+            <li><a data-scroll href="#">Portofolio</a></li>
+            <li><a data-scroll href="#">Blog</a></li>
+            <li><a data-scroll href="#">contact</a></li>
+            <li><a data-scroll href="#">About</a></li>
+        </ul>
+</nav> 
+
+<div id="menu1">
+	<img src="images/map.png">
+</div>
+
 <!-- big header section -->
 <div class="big_header_section">
 	<div class="fixed_menu">
 		<ul>
-			<li><i class="fas fa-bars"></i></li>
-			<li><i class="fas fa-map-marker-alt"></i></li>
+			<li>
+				<a href="#menu" class="menu-point"><i class="fas fa-bars"></i></a></li>
+			<li>
+				<a href="#menu1" class="menu-point1"><i class="fas fa-map-marker-alt"></i></a></li>
 			<li><i class="far fa-compass"></i></li>
 		</ul>
 	</div>
@@ -170,6 +191,41 @@
 	</div>
 </div>
 <!-- end footer section -->
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/menuFullpage.min.js"></script>
+<script>
+        smoothScroll.init();
+        $(document).ready(function() {
+                $('.menu-point').menuFullpage({
+                	menu:"#menu",
+					push:".push",
+
+					side:"left",
+
+					menuWidth:"100%",
+
+					speed:"600",
+
+					activeBtn:"menu-open"
+
+                });
+
+                $('.menu-point1').menuFullpage({
+                	menu:"#menu1",
+					push:".push",
+
+					side:"left",
+
+					menuWidth:"100%",
+
+					speed:"600",
+
+					activeBtn:"menu-open"
+
+                });
+        });
+</script>
 
 </body>
 </html>
