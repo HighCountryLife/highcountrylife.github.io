@@ -1,3 +1,8 @@
+:root{
+	--main-color: #d36009;
+	--support-color: #6f7c56;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -12,7 +17,7 @@ img{
 .big_header_section{
 	width: 100%;
 	height: 100vh;
-	background: url('../images/background.jpg');
+	background: url('../images/back2.jpg');
 	background-size: cover;
 	position: relative;
 	/*border-bottom: 10px solid coral;*/
@@ -65,6 +70,7 @@ img{
 	position: fixed;
 	right: 40px;
 	top: 40px;
+	z-index: 990;
 }
 
 .fixed_menu ul{
@@ -75,11 +81,15 @@ img{
 .fixed_menu ul li{
 	width: 40px;
 	height: 40px;
-	background: rgba(0,0,0,0.7);
+	background: var(--main-color);
 	margin: 3px;
 	color: white;
 	text-align: center;
 	line-height: 40px;
+}
+
+.fixed_menu ul li a{
+	color: white;
 }
 
 .text_section{
@@ -106,12 +116,12 @@ img{
 }
 
 .guide_info a:hover, .package_info a:hover{
-	background: coral;
+	background: var(--main-color);
 	color: white;
 }
 
 .btn_default{
-	border: 2px solid coral;
+	border: 2px solid var(--main-color);
 	padding: 10px 15px;
 	margin-top: 10px;
 }
@@ -122,10 +132,12 @@ img{
 	margin-top: 10px;
 	color: white;
 	background: transparent;
+	position: absolute;
+	bottom: 20%;
 }
 
 .footer_section{
-	background: #2c4d74;
+	background: var(--support-color);
 	padding: 60px 0;
 	color: white;
 
@@ -149,26 +161,66 @@ img{
 }
 
 .cat1{
-	background: url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/greene_county_-_hiking_kaaterskills_falls_0.jpg?itok=YHl0wV_W');
-	
+	background-image:  url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/greene_county_-_hiking_kaaterskills_falls_0.jpg?itok=YHl0wV_W');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;	
 }
 
 .cat2{
-	background: url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/cats_1015_1124.jpg?itok=T_Oa9trE');
+	background-image:  url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/cats_1015_1124.jpg?itok=T_Oa9trE');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;
 }
 
 .cat3{
-	background: url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/cats_1015_2764.jpg?itok=BtgW0kvG');
+	background-image: url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/cats_1015_2764.jpg?itok=BtgW0kvG');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;
 }
 
 .cat4{
-	background: url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/arnold_lounge_0.jpg?itok=sTxK4ihY');
+	background-image: url('https://www.visitthecatskills.com/sites/default/files/styles/960x640_persona/public/arnold_lounge_0.jpg?itok=sTxK4ihY');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;
+}
+
+.cat5{
+	background-image: url('../images/one.jpg');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;
+}
+
+.cat6{
+	background-image: url('../images/two.jpg');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;
+}
+
+.cat7{
+	background-image: url('../images/three.jpg');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;
+}
+
+.cat8{
+	background-image: url('../images/four.jpg');
+	background-color: var(--support-color);
+  	background-blend-mode: multiply;
 }
 
 .category_box{
 	background-size: cover;
 	color: white;
 	padding: 20px;
+	min-height: 300px;
+	position: relative;
+}
+
+.category_box h1{
+	font-size: 20px;
+	position: absolute;
+	width: 80%;
+	top: 20%;
 }
 
 .category_section .col-sm-3{
